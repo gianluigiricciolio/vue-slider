@@ -30,6 +30,7 @@ createApp ({
                 }
             ],
             currentIndex: 0,
+            intervalId: "",
         }
     },
 
@@ -56,14 +57,17 @@ createApp ({
         },
 
         autoplay() {
-            setInterval( this.next, 3000 );
+            this.intervalId=setInterval( this.next, 3000 );
+        },
+
+        autoplayStop() {
+            clearInterval(this.intervalId);
         }
     },
 
     mounted(){
         console.log('mounted');
         this.autoplay();
-
     }
 
 
