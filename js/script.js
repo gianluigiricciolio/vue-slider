@@ -53,11 +53,17 @@ createApp ({
         isActive(index) {
             if (this.currentIndex==index) return "active";
             else return "";
+        },
+
+        autoplay() {
+            setInterval( this.next, 3000 );
         }
     },
 
     mounted(){
         console.log('mounted');
+        this.autoplay();
+
     }
 
 
