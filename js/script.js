@@ -66,7 +66,6 @@ createApp ({
     },
 
     mounted(){
-        console.log('mounted');
         this.autoplay();
     }
 
